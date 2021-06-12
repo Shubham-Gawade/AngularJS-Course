@@ -1,0 +1,6 @@
+<!--String Interpolation-->
+<!--ngStyle is used to change the css style itself-->
+<!--ngClass is used to add or remove css stylesheet dynamically-->
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online:serverStatus === 'online'}">
+  {{ 'Server' }} with ID {{ serverID }} is {{ getServerStatus() }}
+</p>

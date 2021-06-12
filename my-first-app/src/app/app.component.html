@@ -1,0 +1,28 @@
+<!-- Two-way binding [()]-->
+<div class="container" style="width: 980;">
+  <h3>Enter Text : </h3><input type="text" [(ngModel)]="name">
+  <h1>{{name}}</h1>
+  <hr>
+
+  <app-servers></app-servers>
+
+  <p appBasicHighlight>Style me with basic directive!</p>
+
+  <p [appBetterHighlight]="'red'" defaultColor="yellow">Style me with better directive!</p>
+
+  <hr>
+
+  <!-- <ng-template [ngIf]="title != ''">{{title}}</ng-template> -->
+  <div *ngIf="title != ''; else notitle">{{title}}</div>
+  <ng-template #notitle>Title not set</ng-template>
+
+  <hr>
+
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchCase="10">Value is 10</p>
+    <p *ngSwitchCase="100">Value is 100</p>
+    <p *ngSwitchDefault="default">Value is Default</p>
+  </div>
+
+</div>

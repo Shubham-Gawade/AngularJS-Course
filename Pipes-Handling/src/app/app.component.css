@@ -1,0 +1,9 @@
+.container{
+  margin-top: 50px;
+  width: 960px;
+}
+
+.badge{
+  float: right;
+  background-color: black;
+}
